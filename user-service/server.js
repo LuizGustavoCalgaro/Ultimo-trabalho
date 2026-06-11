@@ -1,27 +1,19 @@
 const express = require("express");
-const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+console.log("Arquivo carregado!");
 
-app.post("/login", (req, res) => {
+app.get("/", (req, res) => {
 
-    console.log("INFO: Usuário realizou login");
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    console.log("ALGUÉM ACESSOU O SERVIDOR!");
+    console.log(new Date().toLocaleString());
+    console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
-    res.json({
-        success: true,
-        user: "Luiz"
-    });
-});
-
-app.get("/health", (req, res) => {
-    res.json({
-        status: "UP"
-    });
+    res.send("Funcionando!");
 });
 
 app.listen(3001, () => {
-    console.log("User Service rodando na porta 3001");
+    console.log("Servidor iniciado na porta 3001");
 });
