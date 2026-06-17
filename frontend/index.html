@@ -1,21 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Task Manager</title>
+    <meta charset="UTF-8">
+    <title>Task Manager DevOps</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        input{
+            padding: 10px;
+            width: 70%;
+        }
+
+        button{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        li{
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Lista de Tarefas</h1>
+    <h1>Task Manager DevOps</h1>
 
-<input id="taskInput">
+    <input
+        id="titulo"
+        type="text"
+        placeholder="Digite uma tarefa"
+    >
 
-<button onclick="criarTarefa()">
-Adicionar
-</button>
+    <button onclick="criarTarefa()">
+        Adicionar
+    </button>
 
-<ul id="lista"></ul>
+    <h2>Lista de Tarefas</h2>
 
-<script src="app.js"></script>
+    <ul id="lista"></ul>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
